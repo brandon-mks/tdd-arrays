@@ -42,7 +42,13 @@ export function getLast(array) {
  * getFirstLast([42]); // [42]
  */
 export function getFirstLast(array) {
-  // TODO
+  if (array.length < 1) {
+    return [];
+  } else if (array.length == 1) {
+    return array;
+  } else {
+    return [array[0], array[array.length - 1]];
+  }
 }
 
 /**
