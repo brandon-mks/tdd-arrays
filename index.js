@@ -110,7 +110,15 @@ export function quintuple(numbers) {
  * pluralize([]); // []
  */
 export function pluralize(words) {
-  // TODO
+  let plural = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i][words[i].length - 1] == "s") {
+      plural[i] = words[i] + "es";
+    } else {
+      plural[i] = words[i] + "s";
+    }
+  }
+  return plural;
 }
 
 /**
