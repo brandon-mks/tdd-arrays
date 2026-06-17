@@ -157,7 +157,17 @@ export function countAttendance(attendance) {
  * getLongestWord(["a", "ab", "abc"]); // "abc"
  */
 export function getLongestWord(sentence) {
-  // TODO
+  let word = "";
+  if (sentence.length <= 0) {
+    return null;
+  } else {
+    for (let i = 0; i < sentence.length; i++) {
+      if (sentence[i].length > word.length) {
+        word = sentence[i];
+      }
+    }
+  }
+  return word;
 }
 
 /**
